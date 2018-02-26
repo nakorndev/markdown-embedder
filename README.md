@@ -17,7 +17,7 @@ Import a script `git-embbeder.js` from `dist` folder into bottom of your page.
 Then add any HTML element that contain a `class="g-embed"` attribute with your external link of raw markdown in `data-url="http://example.com/markdown.md"`
 
 ```html
-<div class="g-embed" data-url="http://example.com/markdown.md">
+<div class="g-embed" data-url="http://example.com/markdown.md"></div>
 ```
 
 That's all. :)
