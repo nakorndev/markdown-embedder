@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   module: {
@@ -9,9 +10,17 @@ module.exports = {
       }
     ]
   },
-  entry: './src/git-embedder.js',
+  entry: {
+    'markdown-embedder': './src/markdown-embedder.js',
+    'markdown-embedder.min': './src/markdown-embedder.js'
+  },
   output: {
-    filename: 'git-embedder.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  plugins: [
+    new UglifyJsPlugin({
+      include: /\.min\.js$/
+    })
+  ]
 };

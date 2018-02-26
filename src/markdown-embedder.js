@@ -12,7 +12,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('g-embed'), element
             let converted = new showdown.Converter().makeHtml(text);
             resolve(converted);
         });
-    } 
+    }
     setLoading.then(() => {
         axios.get(element.getAttribute('data-url'))
             .then(response => {
