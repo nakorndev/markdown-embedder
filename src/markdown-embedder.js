@@ -9,7 +9,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('g-embed'), element
     });
     let converter = (text) => {
         return new Promise((resolve, reject) => {
-            let converted = new showdown.Converter().makeHtml(text);
+            let converted = new showdown.Converter({disableForced4SpacesIndentedSublists: true}).makeHtml(text);
             resolve(converted);
         });
     }
