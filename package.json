@@ -23,7 +23,7 @@
   "homepage": "https://github.com/ramutdotnet/markdown-embedder#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "showdown": "^1.8.6"
+    "showdown": "^1.9.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.10",
